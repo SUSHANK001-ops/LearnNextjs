@@ -17,7 +17,7 @@ const connectDB = async ()=>{
     }
     try {
        cached.conn = await cached.promise;
-       
+        
     } catch (error) {
         throw error;
     }

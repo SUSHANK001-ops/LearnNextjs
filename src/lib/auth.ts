@@ -8,7 +8,7 @@ const authOptions: NextAuthOptions = {
         CredentialsProvider({
             name: "Credentials",
             credentials: {
-                email: { label: 'email', type: "text" },
+                email: { label: 'email', type: "email" },
                 password: { label: 'password', type: "password" }
             },
             async authorize(credentials) {
@@ -61,7 +61,7 @@ const authOptions: NextAuthOptions = {
 
     },
     pages: {
-            signIn: "/auth/signin",
+            signIn: "/auth/signup",
             error:'/signin'
     },
     secret: process.env.NEXT_AUTH_SECRET

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Clientprovider from "@/Clientprovider";
 
 export const metadata: Metadata = {
   title: "Full stack project",
@@ -13,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Clientprovider >
+
+        {children}
+        </Clientprovider>
+        </body>
     </html>
   );
 }
